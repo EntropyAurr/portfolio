@@ -30,18 +30,8 @@ function ThemeToggle() {
   }
 
   return (
-    <button
-      onClick={ToggleTheme}
-      className={cn(
-        "fixed top-5 right-5 z-50 rounded-full p-2 transition-colors duration-300 max-sm:hidden",
-        "focus:outline-hidden",
-      )}
-    >
-      {isDarkMode ? (
-        <Sun className="h-6 w-6 text-yellow-300" />
-      ) : (
-        <Moon className="h-6 w-6 text-blue-700" />
-      )}
+    <button onClick={ToggleTheme} className={cn("fixed top-7 right-5 z-50 rounded-full transition-colors duration-300 md:top-5", "focus:outline-hidden")}>
+      {isDarkMode ? <Sun className="h-6.5 w-6.5 text-yellow-300" /> : <Moon className="h-6.5 w-6.5 text-blue-700" />}
     </button>
   );
 }
