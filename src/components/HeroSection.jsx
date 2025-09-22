@@ -3,17 +3,20 @@ import { ArrowDown } from "lucide-react";
 function HeroSection() {
   return (
     <section id="hero" className="relative flex min-h-screen flex-col items-center justify-center px-4">
-      <div className="z-10 container mx-auto max-w-4xl text-center">
+      <div className="z-10 container mx-auto max-w-4xl">
         <div className="space-y-6">
-          <h1 className="text-3xl font-bold tracking-tight md:text-5xl">
+          <h1 className="text-center text-3xl font-bold tracking-tight md:text-5xl">
             <span className="animate-fade-in opacity-0"> Hi, I'm</span>
             <span className="text-gradient animate-fade-in-delay-1 opacity-0"> Au</span>
             <span className="text-primary animate-fade-in-delay-2 opacity-0"> Duong</span>
           </h1>
 
-          <p className="text-muted-foreground animate-fade-in-delay-3 mx-auto max-w-2xl text-lg opacity-0 md:text-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque et eligendi nemo quibusdam incidunt asperiores nam dolorem repellendus sit adipisci?</p>
+          <div className="text-muted-foreground animate-fade-in-delay-3 mx-auto max-w-2xl space-y-2 text-lg opacity-0 md:text-xl">
+            <p>I’m a self-taught Developer with an engineering background, driven by my greatest passion: creating things from imagination.</p>
+            <p>Technology gives me the freedom to transform ideas into reality, and I embrace every challenge as part of the journey to bring my visions to life.</p>
+          </div>
 
-          <div className="animate-fade-in-delay-4 pt-4 opacity-0">
+          <div className="animate-fade-in-delay-4 pt-4 text-center opacity-0">
             <a href="#projects" className="cosmic-button">
               View My Work
             </a>

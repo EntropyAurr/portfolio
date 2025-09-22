@@ -81,7 +81,7 @@
 
   .dark {
     --background: #05080f;
-    --foreground: #e1e7ef;
+    --foreground: #ffffff;
 
     --card: #0b111e;
 
@@ -128,10 +128,10 @@
   }
 }
 
-@utility text-glow {
+/* @utility text-glow {
   @apply relative;
-  text-shadow: 0 0 10px rgba(167, 139, 250, 0.5);
-}
+  text-shadow: 0 0 10px rgba(14, 173, 104, 0.5);
+} */
 
 @utility card-hover {
   @apply transition-transform duration-300 hover:scale-[1.02] hover:shadow-lg;
@@ -145,7 +145,7 @@
 }
 
 @utility cosmic-button {
-  @apply bg-primary text-primary-foreground rounded-full px-6 py-2 font-medium transition-all duration-300 hover:scale-105 hover:shadow-[0_0_10px_rgba(139,92,246,0.5)] active:scale-95;
+  @apply bg-primary text-primary-foreground rounded-full px-6 py-2 font-medium transition-all duration-300 hover:scale-105 hover:shadow-[0_0_10px_rgba(14,183,104,0.5)] active:scale-95;
 }
 
 @utility star {
@@ -162,7 +162,7 @@
   max-width: 100%;
   margin: 0 auto;
   padding: 0;
-  text-align: center;
+  /* text-align: center; */
 }
 
 body {

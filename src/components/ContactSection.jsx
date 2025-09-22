@@ -53,7 +53,7 @@ function ContactSection() {
   return (
     <section id="contact" className="bg-secondary/30 relative px-4 py-24">
       <div className="container mx-auto max-w-5xl">
-        <h2 className="md-4 text-center text-3xl font-bold md:text-4xl">
+        <h2 className="mb-4 text-center text-3xl font-bold md:text-4xl">
           Get in <span className="text-primary"> Touch</span>
         </h2>
 

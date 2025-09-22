@@ -10,9 +10,7 @@ function StarBackground() {
   }, []);
 
   function generateStars() {
-    const numberOfStars = Math.floor(
-      (window.innerWidth * window.innerHeight) / 10000,
-    );
+    const numberOfStars = Math.floor((window.innerWidth * window.innerHeight) / 15000);
 
     const newStars = [];
 
@@ -20,8 +18,8 @@ function StarBackground() {
       newStars.push({
         id: i,
         size: Math.random() * 3 + 1,
-        x: Math.random() * 1280,
-        y: Math.random() * 720,
+        x: Math.random() * window.innerWidth,
+        y: Math.random() * window.innerHeight,
         opacity: Math.random() * 0.5 + 0.5,
         animationDuration: Math.random() * 4 + 2,
       });
@@ -50,7 +48,7 @@ function StarBackground() {
 
   return (
     <div className="pointer-events-none fixed inset-0 z-0 overflow-hidden">
-      {/* {stars.map((star) => (
+      {stars.map((star) => (
         <div
           key={star.id}
           className="star animate-pulse-subtle"
@@ -63,7 +61,7 @@ function StarBackground() {
             animationDuration: `${star.animationDuration}s`,
           }}
         />
-      ))} */}
+      ))}
 
       {meteors.map((meteor) => (
         <div

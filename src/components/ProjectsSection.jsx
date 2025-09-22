@@ -35,7 +35,7 @@ function ProjectsSection() {
     <section id="projects" className="relative px-4 py-24">
       <div className="container mx-auto max-w-5xl">
         <h2 className="mb-4 text-center text-3xl font-bold md:text-4xl">
-          Featured<span> Projects</span>
+          Featured<span className="text-primary"> Projects</span>
         </h2>
 
         <p className="text-muted-foreground mx-auto mb-12 max-w-2xl text-center">Here are some of my recent projects. Each project was carefully crafted with attention to detail, performance, and user experience.</p>
