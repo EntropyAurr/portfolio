@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Moon, Sun } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-function ThemeToggle() {
+function ThemeToggle({ isScrolled }) {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   useEffect(() => {
@@ -30,7 +30,7 @@ function ThemeToggle() {
   }
 
   return (
-    <button onClick={ToggleTheme} className={cn("fixed top-7 right-5 z-50 rounded-full transition-colors duration-300 md:top-5", "focus:outline-hidden")}>
+    <button onClick={ToggleTheme} className={cn("fixed right-5 z-50 rounded-full transition-all duration-300 focus:outline-hidden", isScrolled ? "md:top-3" : "md:top-5")}>
       {isDarkMode ? <Sun className="h-6.5 w-6.5 text-yellow-300" /> : <Moon className="h-6.5 w-6.5 text-blue-700" />}
     </button>
   );

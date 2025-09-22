@@ -7,13 +7,25 @@ import ProjectsSection from "@/components/ProjectsSection";
 import SkillsSection from "@/components/SkillsSection";
 import StarBackground from "@/components/StarBackground";
 import ThemeToggle from "@/components/ThemeToggle";
+import { useEffect, useState } from "react";
 
 function Home() {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    function handleScroll() {
+      setIsScrolled(window.scrollY > 10);
+    }
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <div className="bg-background text-foreground min-h-screen overflow-x-hidden">
-      <ThemeToggle />
+      <NavBar isScrolled={isScrolled} />
+      <ThemeToggle isScrolled={isScrolled} />
       <StarBackground />
-      <NavBar />
 
       <main>
         <HeroSection />

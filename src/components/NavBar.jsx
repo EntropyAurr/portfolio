@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { cn } from "@/lib/utils";
 import { Menu, X } from "lucide-react";
 
@@ -10,21 +10,11 @@ const navItems = [
   { name: "Contact", href: "#contact" },
 ];
 
-function NavBar() {
-  const [isScrolled, setIsScrolled] = useState(false);
+function NavBar({ isScrolled }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  useEffect(() => {
-    function handleScroll() {
-      setIsScrolled(window.screenY > 10);
-    }
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   return (
-    <nav className={cn("fixed z-40 w-full transition-all duration-300", isScrolled ? "bg-background/80 py-3 shadow-xs backdrop-blur-md" : "py-5")}>
+    <nav className={cn("fixed top-0 right-0 left-0 z-40 w-full transition-all duration-300", isScrolled ? "bg-background/80 py-3 shadow-xs backdrop-blur-2xl" : "py-5")}>
       <div className="container flex items-center justify-between md:justify-around">
         <a href="#hero" className="text-foreground flex items-center text-xl font-bold">
           <span className="relative z-10">
