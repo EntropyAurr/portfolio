@@ -30,7 +30,7 @@ function ThemeToggle({ isScrolled }) {
   }
 
   return (
-    <button onClick={ToggleTheme} className={cn("fixed right-5 z-50 rounded-full transition-all duration-300 focus:outline-hidden", isScrolled ? "md:top-3" : "md:top-5")}>
+    <button onClick={ToggleTheme} className={cn("fixed right-5 z-50 rounded-full transition-all duration-300 focus:outline-hidden", isScrolled ? "top-5 md:top-3" : "top-7 md:top-5")}>
       {isDarkMode ? <Sun className="h-6.5 w-6.5 text-yellow-300" /> : <Moon className="h-6.5 w-6.5 text-blue-700" />}
     </button>
   );

@@ -14,7 +14,7 @@ function NavBar({ isScrolled }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className={cn("fixed top-0 right-0 left-0 z-40 w-full transition-all duration-300", isScrolled ? "bg-background/80 py-3 shadow-xs backdrop-blur-2xl" : "py-5")}>
+    <nav className={cn("fixed z-40 w-full transition-all duration-300", isScrolled ? "bg-background/80 py-3 shadow-xs backdrop-blur-2xl" : "py-5", isMenuOpen ? "inset-0" : "")}>
       <div className="container flex items-center justify-between md:justify-around">
         <a href="#hero" className="text-foreground flex items-center text-xl font-bold">
           <span className="relative z-10">

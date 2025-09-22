@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import AboutSection from "@/components/AboutSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
@@ -7,7 +8,6 @@ import ProjectsSection from "@/components/ProjectsSection";
 import SkillsSection from "@/components/SkillsSection";
 import StarBackground from "@/components/StarBackground";
 import ThemeToggle from "@/components/ThemeToggle";
-import { useEffect, useState } from "react";
 
 function Home() {
   const [isScrolled, setIsScrolled] = useState(false);
